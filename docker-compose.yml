@@ -37,4 +37,4 @@ services:
 networks:
   kafka:
     external:
-      name: dockerized-kafka_kafka
+      name: dockerized-kafka_kafka # see https://github.com/jbariel/dockerized-kafka
