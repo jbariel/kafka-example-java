@@ -22,6 +22,8 @@ services:
     tty: true
     env_file:
       - kafka.env
+    environment:
+      PRODUCER_ID: docker-compose-producer
     networks:
       - kafka
   consumer:
@@ -31,6 +33,8 @@ services:
     depends_on: ["producer"]
     env_file:
       - kafka.env
+    environment:
+      CONSUMER_ID: docker-compose-consumer
     networks:
       - kafka
 
